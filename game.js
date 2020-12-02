@@ -1,4 +1,4 @@
-function init(player, OPPONENT){
+function init(player,OPPONENT){
     const canvas = document.getElementById("cvs");
     const ctx = canvas.getContext("2d"); 
 
@@ -14,6 +14,8 @@ function init(player, OPPONENT){
     xImage.src = "img/X.png";
     const oImage = new Image();
     oImage.src = "img/O.png";
+
+    
 
     const COMBOS = [
         [0, 1, 2],
@@ -35,7 +37,8 @@ function init(player, OPPONENT){
                 board[i][j] = id;
                 id++; 
 
-                ctx.strokeStyle = "#000";
+                ctx.strokeStyle = "blue";
+                ctx.lineWidth = 18; 
                 ctx.strokeRect(j * SPACE_SIZE, i * SPACE_SIZE, SPACE_SIZE, SPACE_SIZE);
             }
         }
@@ -67,7 +70,7 @@ function init(player, OPPONENT){
             GAME_OVER = true;
             return;
         }
-
+    
         if(OPPONENT == "ai"){
             let id = minimax(gameData, player.ai).id; 
             gameData[id] = player.ai; 
@@ -79,6 +82,7 @@ function init(player, OPPONENT){
                 showGameOver(player.ai);
                 GAME_OVER = true;
                 return; 
+                
             }
 
             if(isTie(gameData)){
@@ -98,6 +102,7 @@ function init(player, OPPONENT){
         if(isWinner(gameData, player.man)) return{evaluation : -10}; 
         if(isTie(gameData)) return{evaluation : 0}; 
 
+        
         let EMPTY_SPACES = getEmptySpaces(gameData);
         let moves = [];
 
@@ -165,7 +170,7 @@ function init(player, OPPONENT){
             }
 
             if(won){
-                return true; 
+                return true;  
             }
         }
         return false; 
@@ -183,13 +188,13 @@ function init(player, OPPONENT){
     }
 
     function showGameOver(player){
-        let message = player == "tie" ? "Oops No Winner" : "The Winner is";
+        let message = player == "Tie" ? "No Winner" : "Winner is";
         let imgSrc = `img/${player}.png`;
-
+        
         gameOverElement.innerHTML = `
             <h1>${message}</1>
             <img class="winner-img" src=${imgSrc} </img>
-            <div class="play" onclick="location.reload()">Play Again!</div>
+            <div class="play" onclick="location.reload()">Play Again</div>
         `;
         gameOverElement.classList.remove("hide");
     }
