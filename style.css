@@ -3,7 +3,7 @@ body{
 }
 
 #scoreboard {
-    font-weight: bold;
+  
     font-size: 25px;
 }
 #scoreboard .score#player1 {
