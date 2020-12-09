@@ -44,8 +44,8 @@ playBtn.addEventListener("click", function(){
     }
 
     if(!player.man){
-        oBtn.style.backgroundColor = "blue";
-        xBtn.style.backgroundColor = "blue";
+        oBtn.style.backgroundColor = "red";
+        xBtn.style.backgroundColor = "red";
         return; 
     }
     
