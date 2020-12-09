@@ -15,8 +15,6 @@ function init(player,OPPONENT){
     const oImage = new Image();
     oImage.src = "img/O.png";
 
-    
-
     const COMBOS = [
         [0, 1, 2],
         [3, 4, 5],
@@ -80,7 +78,7 @@ function init(player,OPPONENT){
 
             if(isWinner(gameData, player.ai)){
                 showGameOver(player.ai);
-                GAME_OVER = true;
+                GAME_OVER = true; 
                 return; 
                 
             }
@@ -169,12 +167,13 @@ function init(player,OPPONENT){
                 won = gameData[id] == player && won; 
             }
 
-            if(won){
+            if(won){ 
                 return true;  
             }
         }
         return false; 
     }
+
 
     function isTie(gameData){
         let isBoardFill = true;
