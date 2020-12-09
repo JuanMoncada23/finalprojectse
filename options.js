@@ -38,14 +38,14 @@ oBtn.addEventListener("click", function(){
 
 playBtn.addEventListener("click", function(){
     if(!OPPONENT){
-        aiBtn.style.backgroundColor = "red";
-        humanBtn.style.backgroundColor = "red";
+        aiBtn.style.backgroundColor = "blue";
+        humanBtn.style.backgroundColor = "blue";
         return;
     }
 
     if(!player.man){
-        oBtn.style.backgroundColor = "red";
-        xBtn.style.backgroundColor = "red";
+        oBtn.style.backgroundColor = "blue";
+        xBtn.style.backgroundColor = "blue";
         return; 
     }
     
