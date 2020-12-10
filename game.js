@@ -36,7 +36,7 @@ function init(player,OPPONENT){
                 id++; 
 
                 ctx.strokeStyle = "blue";
-                ctx.lineWidth = 18; 
+                ctx.lineWidth = 5; 
                 ctx.strokeRect(j * SPACE_SIZE, i * SPACE_SIZE, SPACE_SIZE, SPACE_SIZE);
             }
         }
