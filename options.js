@@ -1,10 +1,14 @@
+//Start element 
 const options = document.querySelector(".options");
 
+//Buttons 
 const aiBtn = document.querySelector(".ai");
 const humanBtn = document.querySelector(".human"); 
 const xBtn = document.querySelector(".x");
 const oBtn = document.querySelector(".o");
 const playBtn = document.querySelector(".play");
+
+//Gameover element 
 const gameOverElement = document.querySelector(".gameover");
 
 const player = new Object;
