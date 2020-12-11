@@ -2,16 +2,6 @@ body{
     background-color: white; 
 }
 
-#scoreboard {
-    font-size: 25px;
-}
-#scoreboard .score#player1 {
-    text-align: center;
-
-}
-#scoreboard .score#player2{
-    text-align: center;
-}
 .container{
     width: 470px;
     height: 470px;
